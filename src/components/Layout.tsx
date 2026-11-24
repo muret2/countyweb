@@ -17,16 +17,13 @@ export default function Layout() {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/departments">Departments</Link>
-          <a href="/#how">How it works</a>
-          <a href="/#requirements">Requirements</a>
-          <a href="/#contact">Contact</a>
+          <Link to="/requirements">Requirements</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
         <div className="header-actions">
           {session ? (
             <>
-              <Link
-                to={role === "student" ? "/dashboard" : "/admin/applications"}
-              >
+              <Link to={role === "student" ? "/dashboard" : "/admin"}>
                 {role === "student" ? "My applications" : "Admin"}
               </Link>
               <button
